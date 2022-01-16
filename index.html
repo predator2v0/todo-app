@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ToDo App</title>
+    <link
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css"
+      rel="stylesheet"
+    />
+    <style>
+      body {
+        background-color: rosybrown;
+        width: 100%;
+        height: 100%;
+        font-family: "Roboto Mono", Courier, monospace;
+      }
+      .header {
+        width: 400px;
+        height: 60px;
+        position: absolute;
+        left: 50%;
+        top: 50px;
+        transform: translateX(-50%);
+        font-size: 2rem;
+        font-weight: bold;
+        color: rgb(0, 255, 85);
+        text-align: center;
+        background-color: rgb(235, 231, 223);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+      }
+      .container {
+        width: 400px;
+        height: 500px;
+        background-color: rgb(235, 231, 223);
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -webkit-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        -moz-box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+        box-shadow: 10px 10px 5px 0px rgba(0, 0, 0, 0.75);
+      }
+      .input-field {
+        border-bottom: 2px solid rgb(0, 0, 0);
+        height: 60px;
+        width: 90%;
+        padding: 10px 15px;
+        margin: 10px auto;
+        text-align: center;
+      }
+      #input-box,
+      #add-btn {
+        font-size: 1.2rem;
+        border: none;
+        border-bottom: 2px solid rgb(0, 255, 85);
+        outline: none;
+        background-color: rgb(199, 197, 194);
+        color: rgb(64, 85, 47);
+      }
+      #input-box {
+        width: 80%;
+        height: 30px;
+        font-weight: bold;
+      }
+      #add-btn {
+        height: 34px;
+        width: 34px;
+        cursor: pointer;
+      }
+      .error-holder {
+        font-size: 0.8rem;
+        font-weight: bold;
+      }
+      .todo-tasks {
+        width: 95%;
+        height: 300px;
+        margin: auto;
+        overflow-y: auto;
+      }
+      .todo-summary {
+        width: 95%;
+        height: 60px;
+        border: 2px solid rgb(0, 255, 85);
+        margin: 10px auto;
+        text-align: center;
+        font-weight: bold;
+      }
+      .task {
+        margin: 10px 5px;
+        padding: 3px 5px;
+        position: relative;
+        -webkit-box-shadow: 1px 2px 12px 1px rgba(0, 0, 0, 0.63);
+        -moz-box-shadow: 1px 2px 12px 1px rgba(0, 0, 0, 0.63);
+        box-shadow: 1px 2px 12px 1px rgba(0, 0, 0, 0.63);
+      }
+      .task span {
+        position: absolute;
+        right: 5px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="header">To Do List</div>
+    <div class="container">
+      <div class="input-field">
+        <input type="text" id="input-box" />
+        <button id="add-btn">
+          <i class="fas fa-plus"></i>
+        </button>
+        <p class="error-holder" id="err"></p>
+      </div>
+      <div class="todo-tasks"></div>
+      <div class="todo-summary">
+        <p>You have no tasks to do</p>
+      </div>
+    </div>
+    <script src="Script.js"></script>
+  </body>
+</html>
